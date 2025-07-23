@@ -11,8 +11,8 @@ async function bootstrap() {
   .addTag('tasks')
   .build();
   
-  const documentFactory = () => SwaggerModule.createDocument(app,config)
-  SwaggerModule.setup('api',app,documentFactory())
+  const document = () => SwaggerModule.createDocument(app,config)
+  SwaggerModule.setup('api',app,document())
   app.enableCors()
   await app.listen(process.env.PORT ?? 3000);
 }
