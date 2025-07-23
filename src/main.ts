@@ -5,10 +5,10 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   
   const config = new DocumentBuilder()
-  .setTitle('Task Example')
-  .setDescription('Todo app')
+  .setTitle('Todo App API')
+  .setDescription('A simple REST API for managing tasks in a ToDo application. Includes features like task creation, updating status, filtering by status, and deleting tasks.')
   .setVersion('1.0')
-  .addTag('tasks')
+  .addTag('Task Management')
   .build();
   
   const document = () => SwaggerModule.createDocument(app,config)
